@@ -24,26 +24,50 @@ smb - Station message board (駅の伝言板)
 (例: ホームディレクト配下に github 用のディレクトリ作成)
 $ mkdir ~/github
 
-# github ディレクトリ配下に departure リポジトリ展開
-$ cd ~/github
+# github ディレクトリ配下に smb リポジトリ展開
+$ cd ~/github/
 $ git clone git@github.com:ykHakata/smb.git
 ```
 
 #### python3 install
 
 ```
-(メモ)
+Python Boot Camp の手順を参考にして公式サイトから 3.6 をインストール後
+venv を使った利用方法で実行
+smbenv のところは任意の名前でもかまわない
+
+(venv環境の作成)
+$ python3 -m venv smbenv
+
+(venv環境の有効化)
+$ source smbenv/bin/activate
+(smbenv) $
+
+(無効化)
+(smbenv) $ deactivate
 ```
 
 手順の参考
 
 <http://bootcamp-text.readthedocs.io/textbook/1_install.html> - Python Boot Camp Text 2016.04.28 ドキュメント
+<http://bootcamp-text.readthedocs.io/textbook/6_venv.html> - サードパーティ製パッケージと venv
 
-#### *** install
+#### Flask install
 
-手順の参考
+Flask を始めとする必要なパッケージ一式のインストール実行
 
-- <> -  -  の基本的なセットアップ
+```
+(ディレクトリのパスは読み換えて)
+$ cd ~/github/smb/
+$ cat requirements.txt
+click==6.7
+Flask==0.12.2
+...
+
+(履歴からパッケージを再現)
+$ source smbenv/bin/activate
+(smbenv) $ pip install -r requirements.txt
+```
 
 ## START APP
 
@@ -52,7 +76,18 @@ $ git clone git@github.com:ykHakata/smb.git
 ### お手元の PC
 
 ```
-(メモ)
+(venv環境の有効化)
+$ source smbenv/bin/activate
+
+(http://localhost:5000/)
+(smbenv) $ FLASK_APP=hello.py flask run
+
+(終了時は control + c で終了)
+
+(smbenv) $ FLASK_APP=hello.py flask run
+
+(無効化)
+(smbenv) $ deactivate
 ```
 
 ### 開発サーバー
@@ -144,6 +179,10 @@ url へアクセス
 ダウンロード機能
 データの容量は100メガまで
 24時間後に自動消滅
+
+pickle モジュール
+pandas イントール必要
+http://flask.pocoo.org/
 ```
 
 ## DB 初期設計
