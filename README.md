@@ -193,7 +193,7 @@ DROP TABLE IF EXISTS board;
 CREATE TABLE board (                                    -- 伝言板
     id              INTEGER PRIMARY KEY AUTOINCREMENT,  -- ID (例: 5)
     message         TEXT,                               -- ご用件 (例: '今日の夜20:00集合')
-    Publish_ts      TEXT,                               -- 公開した日付 (例: '2018-01-09 20:00:00')
+    publish_ts      TEXT,                               -- 公開した日付 (例: '2018-01-09 20:00:00')
     notice_limit_ts TEXT,                               -- いつまで掲示 (例: '2018-01-10 20:00:00')
     access_token    TEXT,                               -- 編集用のトークン (例: '20180110_token')
     file            TEXT,                               -- ダウンロードファイル名 (例: '20180110_file.jpg')
@@ -206,3 +206,5 @@ CREATE TABLE board (                                    -- 伝言板
 # EXAMPLES
 
 # SEE ALSO
+
+- <https://bootswatch.com/sketchy/> - Bootswatch
