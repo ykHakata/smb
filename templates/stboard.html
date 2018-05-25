@@ -23,8 +23,66 @@
         <span>Hello {{ name }}!</span> {% else %}
         <span>Hello World!</span> {% endif %}
       </p>
+      <h2>公開中の伝言板です</h2>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">URL</th>
+            <th scope="col">作成日</th>
+            <th scope="col">タイトル</th>
+            <th scope="col">内容</th>
+            <th scope="col">いつまで掲示</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-danger">
+            <th scope="row">http://stboard/20180525/yakiniku</th>
+            <td>2018-05-25 19:38:00</td>
+            <td>焼肉屋で待ち合わせ</td>
+            <td>吉塚駅近くの...</td>
+            <td>2018-05-26 19:38:00</td>
+          </tr>
+          <tr class="table-warning">
+            <th scope="row">http://stboard/20180526/wasure</th>
+            <td>2018-05-26 20:38:00</td>
+            <td>忘れ物してます</td>
+            <td>PyFukuoka イベントで...</td>
+            <td>2018-05-27 20:38:00</td>
+          </tr>
+          <tr class="table-info">
+            <th scope="row">http://stboard/20180528/hakata</th>
+            <td>2018-05-28 10:38:00</td>
+            <td>博多駅で待ってる</td>
+            <td>今日のまちあわせ...</td>
+            <td>2018-05-29 10:38:00</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">http://stboard/20180529/pycon</th>
+            <td>2018-05-29 12:38:00</td>
+            <td>PyCon Kyushu 2018</td>
+            <td>イベントの注意事項</td>
+            <td>2018-05-30 12:38:00</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">http://stboard/20180530/dog</th>
+            <td>2018-05-30 21:38:00</td>
+            <td>東公園ドックレース</td>
+            <td>イベントのルールに...</td>
+            <td>2018-05-31 21:38:00</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">http://stboard/20180531/itigo</th>
+            <td>2018-05-31 22:38:00</td>
+            <td>いちご狩りの件</td>
+            <td>解散時刻などに...</td>
+            <td>2018-06-01 22:38:00</td>
+          </tr>
+        </tbody>
+      </table>
+      </tbody>
+      </table>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <a class="btn btn-primary btn-lg" href="/create" role="button">伝言板を新しく作る</a>
       </p>
     </div>
   </div>

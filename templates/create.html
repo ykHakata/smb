@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/sketchy/bootstrap.min.css">
+  <!-- sketchy -->
+  <title>駅の伝言板 - Station message board</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-3">Station message board</h1>
+      <p class="lead">ユーザー登録やログインすることなくご利用いただけます、登録した伝言は１日すぎると自動的に消去されます</p>
+      <hr class="my-4">
+      <p>
+        {% if name %}
+        <span>Hello {{ name }}!</span> {% else %}
+        <span>Hello World!</span> {% endif %}
+      </p>
+      <h2>新しく伝言板を作成します</h2>
+      <div>
+        <form>
+          <fieldset>
+            <legend></legend>
+            <div class="form-group">
+              <label class="col-form-label col-form-label-sm" for="inputSmall">URL</label>
+              <input class="form-control form-control-sm" type="text" placeholder="例: yakiniku (半角英数字で入力)" id="inputSmall">
+            </div>
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault">タイトル</label>
+              <input type="text" class="form-control" placeholder="10文字以内" id="inputDefault">
+            </div>
+            <div class="form-group">
+              <label for="exampleTextarea">内容</label>
+              <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">伝言板の登録を実行</button>
+          </fieldset>
+        </form>
+      </div>
+      <div>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/" role="button">トップページ</a>
+      </p>
+        
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+</body>
+
+</html>

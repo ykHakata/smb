@@ -183,6 +183,27 @@ url へアクセス
 pickle モジュール
 pandas イントール必要
 http://flask.pocoo.org/
+
+2018-05-25 19:20:27
+トップページ
+http://stboard.com/
+
+公開中の伝言板の一覧
+伝言板の各ページへのリンク
+伝言板新規作成ボタン
+
+伝言板作成画面
+http://stboard/create
+
+URL
+タイトル
+内容
+実行ボタン
+トップページボタン
+
+伝言板作成実行
+http://stboard
+(post)
 ```
 
 ## DB 初期設計
